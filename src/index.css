@@ -5,9 +5,137 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
+  
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.v-card{
+  margin:20px;
+}
+
+.v-card-image{
+  border-radius:10px;
+  width:300px;
+  height:480px;
+
+}
+
+.v-card-info{
+  margin-top:10px;
+  min-height:10px;
+}
+
+
+
+.home{
+ 
+  color:white;
+}
+
+.bg-image{
+  background: rgb(92, 86, 86) url("./assets/druck2.png") no-repeat;
+  background-size:cover;
+  height:500px;
+ 
+  background-position:center;
+  z-index: -1;
+  
+}
+
+.mt-5{
+  background:black;
+}
+
+.b-g{
+  background:#EDE9D3;
+  color:#f7f7f7;
+  
+}
+
+.topnav{
+  background:#EDE9D3;
+  opacity:.8;
+  
+}
+
+.icons{
+  display:flex; 
+  margin-top:30px;
+
+}
+
+.summary{
+  
+
+  color:black;
+  margin-top:50px;
+
+}
+
+.subtitle-font{
+  font-family: 'Pacifico', cursive;
+  font-weight:2;
+  display:flex;
+  flex-direction: column;
+  margin-top:20px;
+  align-items: center;
+  font-size: 2.5rem;
+  color:#4D4725 ;
+}
+
+.v-card-title{
+  color:black;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.v-card-sub-title{
+  color:black;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.link{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.hero{
+  margin-bottom:200px;
+  color:#f7f7f7;
+}
+
+
+
+.icon{
+  margin-right:20px;
+}
+
+
+.title{
+  display:1; 
+  font-weight:bolder;
+  font-size:6rem;
+}
+
+.subtitle{
+  font-size:3.5rem;
+  font-weight: 280;
+}
+
+@media(max-width:700px){
+.title{
+  font-size:4rem;
+}
+
+
 }
