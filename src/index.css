@@ -26,6 +26,12 @@ code {
 
 }
 
+.footer{
+  font-family: "serif";
+  font-weight: 5;
+  font-size: .95rem;
+}
+
 .v-card-info{
   margin-top:10px;
   min-height:10px;
@@ -130,6 +136,21 @@ code {
 .subtitle{
   font-size:3.5rem;
   font-weight: 280;
+}
+
+.success-msg {
+  color: #57A773;
+  padding: 10px 15px;
+}
+
+.contact{
+  color:black;
+}
+
+
+.err-msg {
+  color: #EE6352;
+  padding: 10px 15px;
 }
 
 @media(max-width:700px){

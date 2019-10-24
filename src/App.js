@@ -1,5 +1,5 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import React, { useContext } from 'react';
+import {BrowserRouter as Router,__RouterContext, Route, Link} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -8,10 +8,19 @@ import LinkedIn from './assets/linkedin.png';
 import github from './assets/github.png';
 import Footer from './Components/Footer';
 import Home from './pages/Home';
-import Contact from './pages/Contact';
 import About from './pages/About';
 
+
+
+const firstChild = props => {
+  const childrenArray = React.Children.toArray(props.children);
+  return childrenArray[0] || null;
+};
+
+
 class App extends React.Component {
+
+  
 
   constructor(props) {
     super(props);
@@ -34,7 +43,7 @@ class App extends React.Component {
         title: 'About Me'
       },
       contact: {
-        title: 'Let\'s Talk'
+        title: 'Contact Me'
       }
     }
   }
@@ -52,14 +61,14 @@ class App extends React.Component {
                 <Nav className="ml-auto">
                   <Link className="nav-link" to="/">Home</Link>
                   <Link className="nav-link" to="/about">About</Link>
-                  <Link className="nav-link" to="/contact">Contact</Link>
+                  
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
           
             <Route path="/" exact render={()=> <Home className="mt-0" title={this.state.home.title} subTitle={this.state.home.subTitle} linkedin={this.state.home.imglinkedin} github={this.state.home.imggithub} text={this.state.home.text}/>}/>
             <Route path="/about" render={()=> <About title={this.state.about.title}/>}/>
-            <Route path="/contact" render={()=> <Contact title={this.state.contact.title}/>}/>
+           
             
           <Footer/>
         
